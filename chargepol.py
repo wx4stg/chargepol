@@ -30,7 +30,7 @@ import argparse
 from os import path, remove
 from pathlib import Path
 
-parser = argparse.ArgumentParser(description='Cluster VHF source data into flashes and create gridded data products, similar to lmatools flash_sort_and_grid.py\nOutputs to netCDF files, one per 10-minute interval.')
+parser = argparse.ArgumentParser(description='Python code that infers charge layer polarity and vertical location from VHF-based lightning mapping array (LMA) observations of lightning flashes.')
 parser.add_argument('-i', '--input', nargs='+', required=True, help='Path or paths to LMA .nc files to process.')
 parser.add_argument('--max-range', help='Maximum range in km from network center. Default is 100km', type=float, default=100)
 parser.add_argument('--nsou', help='Minimum number of sources for a flash. Default is 20.', type=int, default=20)
